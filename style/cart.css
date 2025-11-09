@@ -1,0 +1,168 @@
+/*  BASE GÉNÉRALE*/
+body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    background-color: #f1f1f1;
+    color: #212529;
+    margin: 0;           
+    padding: 0;           
+    line-height: 1.6;
+}
+
+
+/*  TITRE PRINCIPAL */
+h1 {
+    color: #b30000;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #b30000;
+    border-radius: 2px;
+}
+
+/*  MESSAGE DE SUCCÈS  */
+.message.success {
+    background: #fff3f3;
+    color: #b3001b;
+    border-left: 6px solid #b3001b;
+    box-shadow: 0 5px 15px rgba(179, 0, 27, 0.1);
+    padding: 15px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* TABLEAU DU PANIER */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* SÉLECTEUR DE NIVEAU  */
+select {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #212529;
+    font-weight: 500;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #b30000;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(179, 0, 0, 0.2);
+}
+
+/* BOUTONs */
+button, .btn {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(179, 0, 0, 0.2);
+}
+
+button:hover, .btn:hover {
+    background-color: #8e0016;
+    transform: translateY(-2px);
+}
+
+/* LIEN "SUPPRIMER" */
+a[href*="remove"] {
+    color: #dc3545;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+a[href*="remove"]:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+    text-decoration: underline;
+}
+
+/* MESSAGE SI PANIER VIDE */
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin: 50px 0;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button, .btn {
+        padding: 10px 20px;
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 250px;
+    }
+}

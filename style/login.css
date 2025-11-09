@@ -1,0 +1,116 @@
+/*GLOBAL*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.95), rgba(255, 255, 255, 0.15)),
+        url('images/haut3.jpg') no-repeat center center / cover;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+/*CONTAINER */
+.login-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 2rem;
+}
+
+/* LOGO  */
+.login-header img.login-logo {
+    max-height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.login-header img.login-logo:hover {
+    transform: scale(1.05);
+}
+
+/* CARTE DE CONNEXION */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    color: #111;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/*  TITRE */
+.login-card h2 {
+    color: #d10000;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+/* FORMULAIRE */
+.form-label {
+    font-weight: 600;
+    color: #181818;
+}
+.form-control {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #111;
+    transition: all 0.25s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff2e2e;
+    box-shadow: 0 0 8px rgba(255, 46, 46, 0.3);
+}
+
+
+/* BOUTON SUBMIT  */
+.btn-primary {
+    background-color: #ff2e2e;
+    border: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    box-shadow: 0 0 12px rgba(255, 46, 46, 0.25);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #ff2e2e;
+    border: 1px solid #ff2e2e;
+}
+
+/* MESSAGE D'ERREUR  */
+.alert-danger {
+    background-color: rgba(248, 215, 218, 0.9);
+    color: rgba(114, 28, 36, 1);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*  LIEN INSCRIPTION  */
+.login-card p {
+    color: #000000;
+}
+.login-card a {
+    color: #ff2e2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login-card a:hover {
+    text-decoration: underline;
+}

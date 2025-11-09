@@ -1,0 +1,290 @@
+/* Base et structure */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    transition: background 0.3s ease; 
+    
+}
+
+/* Titre */
+h1 {
+    font-size: 4rem; 
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+}
+h1:hover {
+    transform: scale(1.1); /
+}
+h1.text-center.my-5 {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    color: #f0f0f0;
+}
+
+/* Message d’alerte */
+.message {
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    margin: 2.5rem auto;
+    border-radius: 12px;
+    font-weight: bold;
+    width: fit-content;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+    font-size: 1.1rem;
+}
+.message.success {
+    background-color: #e57373;
+    color: #fff;
+}
+.message.error {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+/* Fiche activité*/
+.activity {
+    background-color: #fff;
+    border-radius: 12px; 
+    padding: 2.5rem; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    margin: 25px;
+}
+
+.activity:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.activity h2 {
+    color: #d32f2f;
+    font-size: 2rem;
+    position: relative;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    letter-spacing: 3.5px;
+}
+.activity p {
+    margin: 1.2rem 0;
+    line-height: 1.7;
+    color: #414141;
+    font-size: 1rem; 
+}
+.activity {
+    background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%); 
+}
+
+
+/* Ajustement pour le sélecteur de niveau */
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Arial', sans-serif;
+}
+
+select:focus {
+    outline: none;
+    border-color: #d32f2f;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5); 
+}
+
+/* Pour une présentation plus dynamique */
+.activity:hover .activity h2 {
+    color: #ff5722; 
+}
+
+.activity:hover p {
+    color: #333; 
+}
+
+.activity {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form {
+    margin-top: 3rem; 
+}
+
+select, button {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+select:focus, button:focus {
+    outline: none;
+    border-color: #d32f2f; 
+}
+
+select {
+    width: 100%;
+    color: #333;
+}
+
+button[name="add_to_cart"] {
+    background-color: #d32f2f;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+button[name="add_to_cart"]:hover {
+    background-color: #fff;
+    color: #d32f2f;
+}
+
+/* Panier flottant en bas */
+.cart-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 20px 35px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px #d32f2f;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.cart-icon:hover {
+    background-color: #fff;
+    color: #d32f2f;
+    box-shadow: 0 0 35px #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cart-icon {
+        font-size: 1rem;
+        padding: 14px 25px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .activity {
+        padding: 2rem; 
+    }
+
+    .activities {
+        padding: 4rem 5vw;
+    }
+}
+
+/* Style de la modale */
+.sport-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.sport-modal-content {
+    background: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s;
+    border-top: 8px solid #d32f2f;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-success {
+    border-top-color: #e57373;
+}
+
+.modal-error {
+    border-top-color: #d32f2f;
+}
+
+.sport-modal-close {
+    background: #bd1818;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sport-modal-close:hover {
+    background: #ff3333;
+    color: #fff;
+}
+
+/* Vidéo de fond */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%); 
+}

@@ -1,0 +1,718 @@
+
+body {
+  
+}
+/* PRESENTATION DU SITE  */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff2e2e;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+p.lead{
+    font-size: 1.5rem;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff2e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+.card.bg-light {
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.bg-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Style de base pour les sections hero */
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 0;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overlay sombre */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+/* Image de fond différente pour chaque section */
+#section1 {
+    background-image: url('images/haut3.jpg');
+}
+
+#section2 {
+    background-image: url('images/haut1.jfif');
+}
+
+
+
+
+
+
+
+
+/* Styles texte et boutons */
+.hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* Styles pour le titre principal */
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #e50914;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideInDown 1s ease-out both;
+}
+
+
+
+
+
+
+/* Styles pour le texte principal */
+.hero-lead {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* Styles pour le bouton hero */
+.hero-btn {
+    background-color: #e50914;
+    color: white;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    animation: pulse 2s infinite 1s;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+.hero-btn:hover {
+    background-color: #ff1e2d;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Animation pour le texte dynamique */
+#dynamic-text {
+    display: inline-block;
+    position: relative;
+    animation: textFade 6s infinite;
+}
+
+
+
+
+#dynamic-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #e50914;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+
+
+#dynamic-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Media Queries pour mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        min-height: 60vh;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+/* Définitions des keyframes */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animation spécifique pour le texte dynamique */
+@keyframes textFade {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-5px);
+    }
+}
+
+/* --- Présentation de Sportify --- */
+section.container {
+    padding: 60px 20px;
+}
+
+
+
+
+
+
+
+/* --- Formulaire d’avis --- */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #1a1a1a; /* noir très foncé */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    color: #f5f5f5; /* blanc cassé pour lisibilité */
+    border: 1px solid #e50914; /* touche de rouge */
+}
+
+form .form-label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Champs de formulaire */
+form .form-control,
+form .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* blanc pour contraste */
+    color: #111; /* texte foncé */
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+    border-color: #e50914;
+    outline: none;
+}
+
+/* Bouton du formulaire */
+form .btn-primary {
+    background-color: #fff;
+    color: #e50914;
+    border: 2px solid #e50914;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+form .btn-primary:hover {
+    background-color: #e50914;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* --- Affichage des avis --- */
+.testimonial {
+    background-color: #fff;
+    
+    border-left: 5px solid #e50914;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* Pied de page */
+footer {
+    background-color: #111;
+    color: white;
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+/* --- Section avec images à gauche et à droite --- */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.image-left, .image-right {
+    width: 48%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.image-left img, .image-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Hauteur des images sur grand écran */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* STRUCTURE PRINCIPALE */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* COLONNES */
+.col-md-5 {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.col-md-7 {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* IMAGE */
+
+
+
+/* TITRE PRINCIPAL */
+.text-danger {
+    color: #e50914;
+    font-size: 1.8rem; /* Taille augmentée */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+/* CONTENU NUTRITIONNEL */
+.nutrition-content {
+    margin: 2rem 0;
+}
+
+.fw-bold {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/* ÉLÉMENTS DE LISTE */
+.benefit-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.benefit-item::before {
+    content: "✓";
+    color: #e50914;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.benefit-item strong {
+    color: #222;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-md-5, 
+    .col-md-7 {
+        width: 100%;
+    }
+    
+    .text-danger {
+        font-size: 1.5rem;
+    }
+   
+}
+
+
+
+/* Conteneur d'image et légende */
+.feature-img-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Légende pour l'image */
+.image-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    display: none;
+    text-align: center;
+}
+
+/* Effet de survol pour afficher la légende */
+.feature-img-container:hover .image-label {
+    display: block;
+}
+
+/* Image en elle-même */
+.feature-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 3%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Lorsque l'image est survolée, on peut ajouter un effet de zoom */
+.feature-img-container:hover .feature-img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+/* Styles pour la modale de notification */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay foncé avec un peu plus de noir */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff; /* Fond blanc pour la petite fenêtre */
+    color: #000; /* Texte noir */
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    text-align: center;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.modal-icon.success {
+    color: #28a745; /* Vert pour succès */
+}
+
+.modal-icon.error {
+    color: #dc3545; /* Rouge pour erreur */
+}
+
+.modal-message {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000; /* Texte noir */
+}
+
+.modal-close-btn {
+    background-color: #ff2e2e; /* Fond rouge */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.modal-close-btn:hover {
+    background-color: #d10000; /* Rouge plus foncé */
+}
+
+/* Style personnalisé pour l'alerte */
+.alert-custom {
+    background-color: #f9f9f9; /* fond très clair */
+    border-left: 5px solid #d10000; /* rouge élégant sur la gauche */
+    color: #333; /* texte gris foncé */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Mise en valeur des parties importantes */
+.alert-custom strong {
+    color: #d10000;
+    font-weight: 600;
+}
+
+/* Lien stylé en rouge */
+.alert-custom .alert-link {
+    color: #d10000;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.alert-custom .alert-link:hover {
+    color: #a80000;
+}
+
+/* aucun avis */
+  /* --- Zone de notification : Aucun avis --- */
+.sport-notification {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-left: 5px solid #d90429;
+    border-radius: 12px; /* Bords arrondis plus marqués */
+    padding: 30px; /* Un peu plus d'espace intérieur */
+    margin: 30px 0; /* Plus d'espacement autour */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus subtile mais marquée */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Survol de la notification */
+.sport-notification:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2); /* Ombre encore plus forte au survol */
+}
+
+.sport-icon {
+    font-size: 3rem; /* Plus grand pour attirer l'attention */
+    margin-right: 25px; /* Plus d'espace entre l'icône et le texte */
+    color: #d90429;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol de l'icône */
+.sport-icon:hover {
+    transform: rotate(15deg); /* Effet léger de rotation de l'icône au survol */
+}
+
+.sport-message h3 {
+    color: #2a2a2a; /* Gris foncé pour un contraste moins dur */
+    margin-top: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.3rem;
+    margin-bottom: 10px; /* Espacement plus prononcé */
+}
+
+.sport-message p {
+    color: #4a4a4a; /* Gris pour une lisibilité plus douce */
+    margin-bottom: 12px; /* Plus d'espacement entre les paragraphes */
+    line-height: 1.7; /* Légèrement plus aéré */
+    font-size: 1.1rem;
+}
+
+/* Bouton CTA : Call to Action */
+.sport-cta {
+    display: inline-block;
+    background-color: #d90429;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px; /* Bords arrondis plus marqués */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Légère ombre pour le bouton */
+}
+
+/* Survol du bouton CTA */
+.sport-cta:hover {
+    background-color: white;
+    color: #d90429;
+    border-color: #d90429;
+    transform: translateY(-3px); /* Effet de levée plus marqué */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre renforcée au survol */
+}
+
+    /* Ajoutez ceci dans le head ou dans votre fichier CSS */
+    select:invalid, textarea:invalid {
+        border-color: red !important;
+    }
+    .error-border {
+        border: 1px solid red !important;
+    }

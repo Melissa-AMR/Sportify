@@ -1,0 +1,137 @@
+/*  GLOBAL  */
+body {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.95), rgba(255, 255, 255, 0.15)),
+        url('images/haut3.jpg') no-repeat center center / cover;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    padding-top: 140px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LOGO EN-TÊTE */
+.page-header {
+    position: absolute;
+    top: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.page-header img {
+    max-height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.page-header img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* CONTAINER FORM */
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 3rem 2rem;
+    max-width: 550px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* TITRE*/
+.container h2 {
+    color: #d10000;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+/* FORMULAIRE */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+label {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.2rem;
+    display: block;
+    text-align: left; /* Aligne les labels à gauche */
+}
+input.form-control {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #111;
+    transition: all 0.25s ease;
+}
+input.form-control:focus {
+    outline: none;
+    border-color: #ff2e2e;
+    box-shadow: 0 0 8px rgba(255, 46, 46, 0.3);
+}
+
+/* BOUTON*/
+button[type="submit"] {
+    background-color: #ff2e2e;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 46, 46, 0.25);
+}
+button[type="submit"]:hover {
+    background-color: #fff;
+    color: #ff2e2e;
+    border: 1px solid #ff2e2e;
+}
+
+/*MESSAGES*/
+.alert-danger,
+.alert-warning {
+    background-color: rgba(248, 215, 218, 0.9);
+    color: rgba(114, 28, 36, 1);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*LIENS ET PARAGRAPHES */
+.container p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #222;
+}
+
+.container a {
+    color: #ff2e2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
