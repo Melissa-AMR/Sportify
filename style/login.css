@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     background:
         linear-gradient(rgba(0, 0, 0, 0.95), rgba(255, 255, 255, 0.15)),
-        url('images/haut3.jpg') no-repeat center center / cover;
+        url('../images/haut3.jpg') no-repeat center center / cover;
     color: #111;
     display: flex;
     align-items: center;

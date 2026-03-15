@@ -1,45 +1,18 @@
+/* ============================================
+   SPORTIFY - Design
+   Palette : Rouge #e50914 / Noir #111 / Blanc
+   ============================================ */
 
 body {
-  
-}
-/* PRESENTATION DU SITE  */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ff2e2e;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-p.lead{
-    font-size: 1.5rem;
-}
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #ff2e2e;
-    margin: 10px auto 0;
-    border-radius: 2px;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-
-.card.bg-light {
-    background-color: #f8f9fa;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card.bg-light:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-
-/* Style de base pour les sections hero */
+/* ============================================
+   HERO SECTIONS (original)
+   ============================================ */
 .hero {
     background-size: cover;
     background-position: center;
@@ -56,25 +29,15 @@ p.lead{
     text-align: center;
 }
 
-/* Overlay sombre */
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-
-
-
-
-
-
-/* Image de fond différente pour chaque section */
 #section1 {
     background-image: url('images/haut3.jpg');
 }
@@ -83,14 +46,6 @@ p.lead{
     background-image: url('images/haut1.jfif');
 }
 
-
-
-
-
-
-
-
-/* Styles texte et boutons */
 .hero .container {
     position: relative;
     z-index: 2;
@@ -102,10 +57,6 @@ p.lead{
     align-items: center;
 }
 
-
-
-
-/* Styles pour le titre principal */
 .hero-title {
     font-size: 4rem;
     font-weight: 700;
@@ -115,12 +66,6 @@ p.lead{
     animation: slideInDown 1s ease-out both;
 }
 
-
-
-
-
-
-/* Styles pour le texte principal */
 .hero-lead {
     font-size: 1.5rem;
     font-weight: 500;
@@ -133,14 +78,10 @@ p.lead{
     width: 100%;
 }
 
+p.lead {
+    font-size: 1.5rem;
+}
 
-
-
-
-
-
-
-/* Styles pour le bouton hero */
 .hero-btn {
     background-color: #e50914;
     color: white;
@@ -156,30 +97,16 @@ p.lead{
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
 .hero-btn:hover {
     background-color: #ff1e2d;
     transform: scale(1.05);
 }
 
-
-
-
-/* Animation pour le texte dynamique */
 #dynamic-text {
     display: inline-block;
     position: relative;
     animation: textFade 6s infinite;
 }
-
-
-
 
 #dynamic-text::after {
     content: '';
@@ -194,153 +121,643 @@ p.lead{
     transition: transform 0.3s ease;
 }
 
-
-
 #dynamic-text:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-/* Media Queries pour mobile */
-@media (max-width: 768px) {
-    .hero {
-        padding: 60px 0;
-        min-height: 60vh;
-    }
-    .hero-title {
-        font-size: 2rem;
-    }
-}
-
-/* Définitions des keyframes */
+/* Keyframes */
 @keyframes slideInDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-/* Animation spécifique pour le texte dynamique */
 @keyframes textFade {
-    0%, 100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    50% {
-        opacity: 0.8;
-        transform: translateY(-5px);
-    }
+    0%, 100% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0.8; transform: translateY(-5px); }
 }
 
-/* --- Présentation de Sportify --- */
+/* ============================================
+   PRESENTATION (original)
+   ============================================ */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff2e2e;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff2e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.card.bg-light {
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.bg-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
 section.container {
     padding: 60px 20px;
 }
 
-
-
-
-
-
-
-/* --- Formulaire d’avis --- */
-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: #1a1a1a; /* noir très foncé */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    color: #f5f5f5; /* blanc cassé pour lisibilité */
-    border: 1px solid #e50914; /* touche de rouge */
-}
-
-form .form-label {
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 8px;
-}
-
-/* Champs de formulaire */
-form .form-control,
-form .form-select {
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #fff; /* blanc pour contraste */
-    color: #111; /* texte foncé */
-    padding: 10px;
+/* ============================================
+   SECTION HEADINGS (nouvelles sections)
+   ============================================ */
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111;
     margin-bottom: 15px;
-    transition: border-color 0.3s ease;
 }
 
-form .form-control:focus,
-form .form-select:focus {
-    border-color: #e50914;
-    outline: none;
-}
-
-/* Bouton du formulaire */
-form .btn-primary {
-    background-color: #fff;
+.section-heading span {
     color: #e50914;
-    border: 2px solid #e50914;
-    padding: 12px 25px;
-    font-weight: bold;
-    border-radius: 30px;
-    text-transform: uppercase;
+}
+
+.section-heading.text-center {
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.15rem;
+    margin-bottom: 50px;
+}
+
+/* ============================================
+   FEATURES SECTION - grille de 3 cartes
+   ============================================ */
+.section-features {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
-form .btn-primary:hover {
-    background-color: #e50914;
-    color: white;
-    transform: scale(1.05);
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+.feature-card-img {
+    overflow: hidden;
+    height: 220px;
+}
 
+.feature-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
+.feature-card:hover .feature-card-img img {
+    transform: scale(1.08);
+}
 
+.feature-card-body {
+    padding: 30px 25px;
+}
 
-
-
-
-
-/* --- Affichage des avis --- */
-.testimonial {
-    background-color: #fff;
-    
-    border-left: 5px solid #e50914;
-    padding: 20px;
-    margin-bottom: 20px;
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #e50914;
     border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon i {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.feature-card-body h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.feature-card-body p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ============================================
+   SERVICES SECTION - grille de 3 cartes
+   ============================================ */
+.section-services {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: #e50914;
+}
+
+.service-card-img {
+    overflow: hidden;
+    height: 200px;
+}
+
+.service-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-img img {
+    transform: scale(1.08);
+}
+
+.service-card-content {
+    padding: 25px;
+}
+
+.service-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #111;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.service-icon i {
+    color: #e50914;
+    font-size: 1.2rem;
+}
+
+.service-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.service-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.service-card-content ul li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.service-card-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background-color: #e50914;
+    border-radius: 50%;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #e50914;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: gap 0.3s ease;
+}
+
+.service-link:hover {
+    gap: 14px;
+    color: #c50812;
+}
+
+/* ============================================
+   CTA BANNER
+   ============================================ */
+.cta-banner {
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta-banner p {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.btn-hero-primary {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid #e50914;
+}
+
+.btn-hero-primary:hover {
+    background-color: #ff1e2d;
+    border-color: #ff1e2d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+    color: #fff;
+}
+
+/* ============================================
+   SECTION AVIS - FORMULAIRE
+   ============================================ */
+.section-reviews {
+    padding: 100px 0;
+    background-color: #111;
+}
+
+.section-reviews .section-heading {
+    color: #fff;
+}
+
+.section-reviews .section-subtitle {
+    color: #999;
+}
+
+.review-login-prompt {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-login-icon {
+    width: 70px;
+    height: 70px;
+    background: #e50914;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.review-login-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.review-login-prompt h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.review-login-prompt p {
+    color: #aaa;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn-review-login {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-review-login:hover {
+    background-color: #ff1e2d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+    color: #fff;
+}
+
+/* Formulaire d'avis */
+.review-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.review-form .form-label {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.review-form .form-label i {
+    color: #e50914;
+    margin-right: 8px;
+}
+
+.review-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.review-form-group {
+    margin-bottom: 20px;
+}
+
+.review-form .form-select,
+.review-form .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.review-form .form-select option {
+    background-color: #222;
+    color: #fff;
+}
+
+.review-form .form-select:focus,
+.review-form .form-control:focus {
+    border-color: #e50914;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.2);
+}
+
+.review-form .form-control::placeholder {
+    color: #888;
+}
+
+/* Etoiles interactives */
+.star-rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating-input input {
+    display: none;
+}
+
+.star-rating-input label {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #444;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label,
+.star-rating-input input:checked ~ label {
+    color: #e50914;
+    transform: scale(1.1);
+}
+
+.btn-submit-review {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-submit-review:hover {
+    background-color: #ff1e2d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+}
+
+/* ============================================
+   SECTION TEMOIGNAGES - GRILLE
+   ============================================ */
+.section-testimonials {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-color: #e50914;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.testimonial-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.testimonial-avatar i {
+    color: #e50914;
+    font-size: 1.1rem;
+}
+
+.testimonial-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-user {
+    font-weight: 700;
+    color: #111;
+    font-size: 0.95rem;
+}
+
+.testimonial-date {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.testimonial-stars {
+    margin-bottom: 12px;
+}
+
+.testimonial-stars .star-filled {
+    color: #e50914;
+    font-size: 0.9rem;
+}
+
+.testimonial-stars .star-empty {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.testimonial-activity {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.testimonial-activity i {
+    color: #e50914;
+    margin-right: 5px;
+}
+
+.testimonial-text {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.no-reviews {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.no-reviews i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.no-reviews h3 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.no-reviews p {
+    color: #888;
+    font-size: 1.05rem;
 }
 
 /* Pied de page */
@@ -351,192 +768,13 @@ footer {
     padding: 20px 0;
 }
 
-/* --- Section avec images à gauche et à droite --- */
-.image-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0;
-}
-
-.image-left, .image-right {
-    width: 48%;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.image-left img, .image-right img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Hauteur des images sur grand écran */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* STRUCTURE PRINCIPALE */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    align-items: center;
-    gap: 2rem;
-}
-
-/* COLONNES */
-.col-md-5 {
-    width: 40%;
-    flex-shrink: 0;
-}
-
-.col-md-7 {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* IMAGE */
-
-
-
-/* TITRE PRINCIPAL */
-.text-danger {
-    color: #e50914;
-    font-size: 1.8rem; /* Taille augmentée */
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.3;
-}
-
-/* CONTENU NUTRITIONNEL */
-.nutrition-content {
-    margin: 2rem 0;
-}
-
-.fw-bold {
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
-
-/* ÉLÉMENTS DE LISTE */
-.benefit-item {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 1.2rem;
-}
-
-.benefit-item::before {
-    content: "✓";
-    color: #e50914;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.benefit-item strong {
-    color: #222;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-
-
-
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
-    
-    .col-md-5, 
-    .col-md-7 {
-        width: 100%;
-    }
-    
-    .text-danger {
-        font-size: 1.5rem;
-    }
-   
-}
-
-
-
-/* Conteneur d'image et légende */
-.feature-img-container {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-/* Légende pour l'image */
-.image-label {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 15px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    font-weight: 600;
-    display: none;
-    text-align: center;
-}
-
-/* Effet de survol pour afficher la légende */
-.feature-img-container:hover .image-label {
-    display: block;
-}
-
-/* Image en elle-même */
-.feature-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 3%;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Lorsque l'image est survolée, on peut ajouter un effet de zoom */
-.feature-img-container:hover .feature-img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-
-
-
-
-
-
-
-
-/* Styles pour la modale de notification */
+/* ============================================
+   MODALE NOTIFICATION
+   ============================================ */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Overlay foncé avec un peu plus de noir */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -552,13 +790,13 @@ footer {
 }
 
 .modal-content {
-    background-color: #fff; /* Fond blanc pour la petite fenêtre */
-    color: #000; /* Texte noir */
+    background-color: #fff;
+    color: #000;
     padding: 25px;
     border-radius: 8px;
     width: 90%;
     max-width: 400px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     transform: translateY(-20px);
     transition: transform 0.3s ease;
@@ -568,27 +806,14 @@ footer {
     transform: translateY(0);
 }
 
-.modal-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.modal-icon.success {
-    color: #28a745; /* Vert pour succès */
-}
-
-.modal-icon.error {
-    color: #dc3545; /* Rouge pour erreur */
-}
-
 .modal-message {
     margin-bottom: 20px;
     font-size: 16px;
-    color: #000; /* Texte noir */
+    color: #000;
 }
 
 .modal-close-btn {
-    background-color: #ff2e2e; /* Fond rouge */
+    background-color: #ff2e2e;
     color: white;
     border: none;
     padding: 8px 20px;
@@ -599,14 +824,16 @@ footer {
 }
 
 .modal-close-btn:hover {
-    background-color: #d10000; /* Rouge plus foncé */
+    background-color: #d10000;
 }
 
-/* Style personnalisé pour l'alerte */
+/* ============================================
+   ALERT / NOTIFICATION
+   ============================================ */
 .alert-custom {
-    background-color: #f9f9f9; /* fond très clair */
-    border-left: 5px solid #d10000; /* rouge élégant sur la gauche */
-    color: #333; /* texte gris foncé */
+    background-color: #f9f9f9;
+    border-left: 5px solid #d10000;
+    color: #333;
     padding: 20px;
     border-radius: 8px;
     margin: 25px 0;
@@ -615,13 +842,11 @@ footer {
     line-height: 1.6;
 }
 
-/* Mise en valeur des parties importantes */
 .alert-custom strong {
     color: #d10000;
     font-weight: 600;
 }
 
-/* Lien stylé en rouge */
 .alert-custom .alert-link {
     color: #d10000;
     font-weight: 600;
@@ -633,86 +858,106 @@ footer {
     color: #a80000;
 }
 
-/* aucun avis */
-  /* --- Zone de notification : Aucun avis --- */
 .sport-notification {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-left: 5px solid #d90429;
-    border-radius: 12px; /* Bords arrondis plus marqués */
-    padding: 30px; /* Un peu plus d'espace intérieur */
-    margin: 30px 0; /* Plus d'espacement autour */
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
     display: flex;
     align-items: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus subtile mais marquée */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     font-family: 'Helvetica Neue', Arial, sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Survol de la notification */
 .sport-notification:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2); /* Ombre encore plus forte au survol */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
 }
 
 .sport-icon {
-    font-size: 3rem; /* Plus grand pour attirer l'attention */
-    margin-right: 25px; /* Plus d'espace entre l'icône et le texte */
+    font-size: 3rem;
+    margin-right: 25px;
     color: #d90429;
-    transition: transform 0.3s ease;
-}
-
-/* Effet de survol de l'icône */
-.sport-icon:hover {
-    transform: rotate(15deg); /* Effet léger de rotation de l'icône au survol */
 }
 
 .sport-message h3 {
-    color: #2a2a2a; /* Gris foncé pour un contraste moins dur */
+    color: #2a2a2a;
     margin-top: 0;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1.3rem;
-    margin-bottom: 10px; /* Espacement plus prononcé */
+    margin-bottom: 10px;
 }
 
 .sport-message p {
-    color: #4a4a4a; /* Gris pour une lisibilité plus douce */
-    margin-bottom: 12px; /* Plus d'espacement entre les paragraphes */
-    line-height: 1.7; /* Légèrement plus aéré */
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    line-height: 1.7;
     font-size: 1.1rem;
 }
 
-/* Bouton CTA : Call to Action */
-.sport-cta {
-    display: inline-block;
-    background-color: #d90429;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px; /* Bords arrondis plus marqués */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-top: 15px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Légère ombre pour le bouton */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 992px) {
+    .features-grid,
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-form-row {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Survol du bouton CTA */
-.sport-cta:hover {
-    background-color: white;
-    color: #d90429;
-    border-color: #d90429;
-    transform: translateY(-3px); /* Effet de levée plus marqué */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre renforcée au survol */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        min-height: 60vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .features-grid,
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .cta-banner h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-features,
+    .section-services,
+    .section-reviews,
+    .section-testimonials {
+        padding: 60px 0;
+    }
+
+    .cta-banner {
+        padding: 50px 0;
+    }
+
+    .review-form {
+        padding: 25px;
+    }
 }
 
-    /* Ajoutez ceci dans le head ou dans votre fichier CSS */
-    select:invalid, textarea:invalid {
-        border-color: red !important;
-    }
-    .error-border {
-        border: 1px solid red !important;
-    }
+/* Validation */
+select:invalid, textarea:invalid {
+    border-color: red !important;
+}
+.error-border {
+    border: 1px solid red !important;
+}

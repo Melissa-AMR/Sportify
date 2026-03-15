@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_review']) && $i
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Sportify</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="accueil.css">
 </head>
 
@@ -84,8 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_review']) && $i
                 class="btn btn-primary btn-lg hero-btn">Commencer maintenant</a>
         </div>
     </section>
-    
-    <!--div-->
+
     <section class="container my-5" name="presentation de site">
         <h2 class="section-title ">
             Présentation de <span>Sportify</span>
@@ -95,13 +95,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_review']) && $i
                 <div class="card shadow-lg border-0 rounded-4 p-5 bg-light">
                     <div class="text-center mb-4">
                         <i class=" display-4 text-danger"></i>
-
                     </div>
                     <p class="lead text-center text-muted">
-                        <strong>Sportify</strong>, c’est bien plus qu’une simple application de sport.
-                        C’est un véritable coach numérique, conçu pour vous motiver, vous guider et vous permettre
+                        <strong>Sportify</strong>, c'est bien plus qu'une simple application de sport.
+                        C'est un véritable coach numérique, conçu pour vous motiver, vous guider et vous permettre
                         de repousser vos limites. Débutant, amateur ou confirmé ? Peu importe.
-                        Notre plateforme intelligente s’adapte à tous les niveaux, et vous accompagne dans chaque
+                        Notre plateforme intelligente s'adapte à tous les niveaux, et vous accompagne dans chaque
                         étape de votre transformation physique.
                         <br><br>
                         Grâce à une interface fluide, des outils de suivi performants et une communauté active,
@@ -112,355 +111,228 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_review']) && $i
         </div>
     </section>
 
-    <!-- Fonctionnalites principales -->
-    <section class="container" name="Fonctionnalites principales">
-        <h2 class="section-title">Fonctionnalités principales</h2>
+    <!-- FONCTIONNALITES - grille de cartes -->
+    <section class="section-features" id="features">
+        <div class="container">
+            <h2 class="section-heading text-center">Fonctionnalités principales</h2>
+            <p class="section-subtitle">Tout ce dont vous avez besoin pour atteindre vos objectifs</p>
 
-        <div class="row align-items-center mb-5">
-            <div class="col-md-5 feature-img-container">
-                <img src="images/coach2.jpg" class="feature-img" alt="Suivi des entraînements">
-            </div>
-            <div class="col-md-7">
-                <h4 class="text-danger mb-3">
-                    <i class="fas fa-chart-line me-2"></i>Suivi des Entraînements - Votre Coach Data
-                </h4>
-
-                <div class="nutrition-content">
-                    <p class="fw-bold">Transformez chaque séance en progression mesurable !</p>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Analyse approfondie</strong> de tous vos paramètres d'entraînement avec visualisation en temps réel
-                        </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="images/coach2.jpg" alt="Suivi des entraînements">
                     </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Tableaux de bord clairs</strong> pour suivre vos progrès sur le court, moyen et long terme
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Recommandations intelligentes</strong> basées sur vos performances pour optimiser chaque mouvement
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Adapté à tous niveaux</strong>, du débutant à l'athlète confirmé, avec des métriques personnalisées
-                        </div>
+                    <div class="feature-card-body">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Suivi des Entraînements</h3>
+                        <p>Analyse approfondie de vos paramètres, tableaux de bord clairs et recommandations intelligentes basées sur vos performances.</p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="row align-items-center flex-md-row-reverse mb-5">
-            <div class="col-md-5 feature-img-container">
-                <img src="images/equipe1.jpg" class="feature-img" alt="Communauté sportive">
-            </div>
-            <div class="col-md-7">
-                <h4 class="text-danger mb-3">
-                    <i class="fas fa-users me-2"></i>Communauté Sportive - Votre Réseau de Passionnés
-                </h4>
-
-                <div class="nutrition-content">
-                    <p class="fw-bold">Rejoignez une famille de sportifs motivés et bienveillants !</p>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Échanges enrichissants</strong> avec partage de conseils et retours d'expérience entre membres
-                        </div>
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="images/perso.jpg" alt="Objectifs personnalisés">
                     </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Défis communautaires</strong> stimulants pour booster votre motivation et dépasser vos limites
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Réseau local</strong> pour trouver des partenaires d'entraînement ou créer des événements près de chez vous
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Accès privilégié</strong> à des experts et coachs pour des conseils personnalisés
-                        </div>
+                    <div class="feature-card-body">
+                        <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Objectifs Personnalisés</h3>
+                        <p>Plan 100% adapté à votre niveau, défis intelligents ajustés automatiquement et système de motivation avec récompenses.</p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="row align-items-center mb-5">
-            <div class="col-md-5 feature-img-container">
-                <img src="images/perso.jpg" class="feature-img" alt="Objectifs personnalisés">
-            </div>
-            <div class="col-md-7">
-                <h4 class="text-danger mb-3">
-                    <i class="fas fa-bullseye me-2"></i>Objectifs Personnalisés - Votre Feuille de Route Sur Mesure
-                </h4>
-
-                <div class="nutrition-content">
-                    <p class="fw-bold">Transformez vos ambitions en résultats concrets !</p>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Plan 100% adapté</strong> à votre niveau actuel, vos disponibilités et vos objectifs à long terme
-                        </div>
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="images/coach3.jpg" alt="Communauté sportive">
                     </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Défis intelligents</strong> ajustés automatiquement selon votre progression et vos performances
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Système de motivation</strong> avec rappels personnalisés et récompenses virtuelles pour célébrer chaque étape
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Visualisation de progression</strong> avec indicateurs clairs pour mesurer vos avancées vers la meilleure version de vous-même
-                        </div>
+                    <div class="feature-card-body">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <h3>Communauté Sportive</h3>
+                        <p>Échanges enrichissants, défis communautaires stimulants et accès privilégié à des experts et coachs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- NOS SERVICES - cartes avec image -->
+    <section class="section-services">
+        <div class="container">
+            <h2 class="section-heading text-center">Nos services</h2>
+            <p class="section-subtitle">Des programmes adaptés à chaque objectif</p>
 
-    <!-- NOS SERVICES -->
-    <section class="container" name="nos services" >
-        <h2 class="section-title">Nos services</h2>
-
-        <div class="row align-items-center flex-md-row-reverse mb-5">
-            <div class="col-md-5 feature-img-container">
-                <img src="images/yoga1.jpg" class="feature-img" alt="Coaching personnalisé">
-            </div>
-            <div class="col-md-7">
-                <h5 class="text-danger mb-3">
-                    <i class="fas fa-user-tie me-2"></i>Coaching Personnalisé - Votre Entraîneur Privé Digital
-                </h5>
-
-                <div class="nutrition-content">
-                    <p class="fw-bold">L'expertise d'un coach pro, disponible 24h/24 dans votre poche !</p>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Programmes ultra-personnalisés</strong> conçus par nos experts et ajustés en temps réel selon votre progression
-                        </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="images/yoga1.jpg" alt="Coaching personnalisé">
                     </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Feedback instantané</strong> avec analyse technique et corrections vidéo pour chaque mouvement
-                        </div>
+                    <div class="service-card-content">
+                        <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Coaching Personnalisé</h3>
+                        <ul>
+                            <li>Programmes ultra-personnalisés ajustés en temps réel</li>
+                            <li>Feedback instantané et corrections vidéo</li>
+                            <li>Suivi quotidien et rappels motivationnels</li>
+                            <li>Adapté à votre emploi du temps</li>
+                        </ul>
+                        <a href="activities.php" class="service-link">Découvrir <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </div>
 
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Suivi quotidien</strong> avec rappels motivationnels et ajustements automatiques de votre planning
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="images/pilate1.jpg" alt="Programmes d'entraînement">
                     </div>
+                    <div class="service-card-content">
+                        <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Programmes d'Entraînement</h3>
+                        <ul>
+                            <li>50+ programmes scientifiquement validés</li>
+                            <li>Brûle-graisses avec suivi métabolique</li>
+                            <li>Préparation marathon sur mesure</li>
+                            <li>Prise de masse intelligente</li>
+                        </ul>
+                        <a href="activities.php" class="service-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
 
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Flexibilité totale</strong> - Adapté à VOTRE emploi du temps et à VOS objectifs spécifiques
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="images/nutrition1.jpg" alt="Suivi nutritionnel">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Suivi Nutritionnel</h3>
+                        <ul>
+                            <li>Plans alimentaires sur-mesure</li>
+                            <li>Liste de courses intelligente</li>
+                            <li>Analyse nutritionnelle complète</li>
+                            <li>Accès à nos diététiciens certifiés</li>
+                        </ul>
+                        <a href="activities.php" class="service-link">Découvrir <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="row align-items-center mb-5">
-            <div class="col-md-5 feature-img-container">
-                <img src="images/pilate1.jpg" class="feature-img" alt="Programmes d'entraînement">
-            </div>
-            <div class="col-md-7">
-                <h5 class="text-danger mb-3">
-                    <i class="fas fa-dumbbell me-2"></i>Programmes d'Entraînement - Votre Coach Personnel
-                </h5>
-
-                <div class="nutrition-content"> <!-- Même classe que la section nutrition pour conserver le style -->
-                    <p class="fw-bold">Votre transformation, votre succès !</p>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>50+ programmes scientifiquement validés</strong> adaptés à tous les niveaux et objectifs sportifs
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Brûle-graisses intensif</strong> avec suivi métabolique personnalisé pour des résultats optimaux
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Préparation marathon</strong> avec planification sur mesure et ajustements en temps réel
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Prise de masse intelligente</strong> combinant hypertrophie et préservation articulaire
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center flex-md-row-reverse  mb-5">
-            <div class="col-md-5 feature-img-container">
-                <img src="images/nutrition1.jpg" class="feature-img img-resposive-custom "
-                    alt="Suivi des entraînements">
-            </div>
-            <div class="col-md-7">
-                <h5 class="text-danger mb-3">
-                    <i class="fas fa-utensils me-2"></i>Suivi Nutritionnel - Votre Partenaire Alimentaire Intelligent
-                </h5>
-
-                <div class="nutrition-content">
-                    <p class="fw-bold">Votre allié gourmand pour des résultats maximaux !</p>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Plans alimentaires sur-mesure</strong> parfaitement adaptés à vos goûts, votre rythme de vie et vos objectifs sportifs
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Liste de courses intelligente</strong> qui anticipe vos besoins et propose des alternatives healthy à vos produits habituels
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Analyse nutritionnelle complète</strong> : suivi précis de vos apports en macros/micro-nutriments avec recommandations personnalisées
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div>
-                            <strong>Accès privilégié</strong> à nos diététiciens certifiés pour des conseils professionnels sans frustration
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- BANDEAU CTA -->
+    <section class="cta-banner">
+        <div class="container text-center">
+            <h2>Prêt à transformer votre corps ?</h2>
+            <p>Rejoignez Sportify et commencez votre parcours fitness dès aujourd'hui.</p>
+            <a href="<?= $isLoggedIn ? 'activities.php' : 'register.php' ?>" class="btn-hero-primary">S'inscrire gratuitement</a>
         </div>
     </section>
 
 
 
     <!--LAISSER UN AVIS -->
-    <section class="container mt-5" name=" les avis " >
-        <h2 class="section-title">Laissez un avis</h2>
+    <section class="section-reviews" id="avis">
+        <div class="container">
+            <h2 class="section-heading text-center">Votre avis compte</h2>
+            <p class="section-subtitle">Partagez votre expérience et aidez notre communauté</p>
 
-        <?php if (!$isLoggedIn): ?>
-            <div class="alert alert-custom" role="alert">
-                <p style="font-size: 1.3rem; font-weight: 600;">
-                    Votre avis compte vraiment.
-                </p>
-                <p>
-                    Chaque retour que nous recevons nous aide à améliorer continuellement notre service.
-                    En partageant votre expérience, vous contribuez à rendre la plateforme plus utile et plus performante.
-                </p>
-                <p style="font-size: 1.15rem; font-weight: 600; color: #d10000;">
-                    Que votre expérience ait été positive ou que vous ayez des suggestions, nous souhaitons vous entendre.
-                </p>
-                <p>
-                    Votre opinion peut guider d'autres utilisateurs et nous permet de répondre encore mieux à vos attentes.
-                </p>
-                <p style="font-size: 1.2rem; font-weight: 600;">
-                    <a href="Login.php" class="alert-link">Connectez-vous</a> pour laisser votre avis dès maintenant.
-                </p>
-                <p><strong>Merci de faire partie de notre communauté.</strong></p>
-            </div>
+            <?php if (!$isLoggedIn): ?>
+                <div class="review-login-prompt">
+                    <div class="review-login-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Rejoignez la conversation</h3>
+                    <p>Votre retour nous aide a ameliorer nos services. Chaque avis guide les futurs sportifs dans leur choix.</p>
+                    <a href="Login.php" class="btn-review-login"><i class="fas fa-sign-in-alt"></i> Se connecter pour donner un avis</a>
+                </div>
 
-        <?php else: ?>
-            <form method="POST" action="accueil.php">
-                <div class="mb-3">
-                    <label for="activity_id" class="form-label">Choisissez une activité</label>
-                    <select class="form-select" id="activity_id" name="activity_id" required>
-                        <option value="">Sélectionnez une activité</option>
-                        <?php foreach ($activities as $activity): ?>
-                            <option value="<?= $activity['id'] ?>"><?= htmlspecialchars($activity['nom_activite']) ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="rating" class="form-label">Votre note</label>
-                    <select class="form-select" id="rating" name="rating" required>
-                        <!-- le systeme des niveau je les convertis en nombre pour faciliter la manipulation de la base de données -->
-                        <option value="1">1 - Très insatisfait</option>
-                        <option value="2">2 - Insatisfait</option>
-                        <option value="3">3 - Moyen</option>
-                        <option value="4">4 - Satisfait</option>
-                        <option value="5">5 - Très satisfait</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="review_text" class="form-label">Votre avis</label>
-                    <textarea class="form-control" id="review_text" name="review_text" rows="4" required></textarea>
-                </div>
-                <button type="submit" name="submit_review" class="btn btn-primary">Soumettre l'avis</button>
-            </form>
-        <?php endif; ?>
+            <?php else: ?>
+                <form method="POST" action="accueil.php" class="review-form">
+                    <div class="review-form-row">
+                        <div class="review-form-group">
+                            <label for="activity_id" class="form-label"><i class="fas fa-running"></i> Activite</label>
+                            <select class="form-select" id="activity_id" name="activity_id" required>
+                                <option value="">Selectionnez une activite</option>
+                                <?php foreach ($activities as $activity): ?>
+                                    <option value="<?= $activity['id'] ?>"><?= htmlspecialchars($activity['nom_activite']) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="review-form-group">
+                            <label class="form-label"><i class="fas fa-star"></i> Votre note</label>
+                            <div class="star-rating-input">
+                                <?php for ($i = 5; $i >= 1; $i--): ?>
+                                    <input type="radio" id="star<?= $i ?>" name="rating" value="<?= $i ?>" required>
+                                    <label for="star<?= $i ?>" title="<?= $i ?> etoile<?= $i > 1 ? 's' : '' ?>"><i class="fas fa-star"></i></label>
+                                <?php endfor; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-form-group">
+                        <label for="review_text" class="form-label"><i class="fas fa-pen"></i> Votre commentaire</label>
+                        <textarea class="form-control" id="review_text" name="review_text" rows="4" placeholder="Decrivez votre experience..." required></textarea>
+                    </div>
+                    <button type="submit" name="submit_review" class="btn-submit-review">
+                        <i class="fas fa-paper-plane"></i> Publier mon avis
+                    </button>
+                </form>
+            <?php endif; ?>
+        </div>
     </section>
 
     <!--LIRE LES AVIS LAISSES -->
-    <section class="container mt-5">
-        <h2 class="section-title">Avis des utilisateurs</h2>
-        <?php
-        try {
-            // Récupération des avis avec note > 3 
-            $sql = "SELECT DISTINCT av.id, a.nom_activite as activity_name, u.id as utilisateur_id, 
-                       av.note, av.commentaire, av.date_avis
-                FROM avis av
-                JOIN activites a ON av.activite_id = a.id
-                JOIN utilisateurs u ON av.utilisateur_id = u.id
-                WHERE av.note > 3
-                ORDER BY av.date_avis DESC";
+    <section class="section-testimonials">
+        <div class="container">
+            <h2 class="section-heading text-center">Ce que disent nos membres</h2>
+            <p class="section-subtitle">Des retours authentiques de notre communaute sportive</p>
 
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            <?php
+            try {
+                $sql = "SELECT DISTINCT av.id, a.nom_activite as activity_name, u.id as utilisateur_id,
+                           av.note, av.commentaire, av.date_avis
+                    FROM avis av
+                    JOIN activites a ON av.activite_id = a.id
+                    JOIN utilisateurs u ON av.utilisateur_id = u.id
+                    WHERE av.note > 3
+                    ORDER BY av.date_avis DESC";
 
-            if (count($reviews) > 0) {
-                foreach ($reviews as $row): ?>
-                    <div class="testimonial">
-                        <p><strong><?= htmlspecialchars($row['utilisateur_id']) ?> -
-                                <?= date('d M Y', strtotime($row['date_avis'])) ?></strong></p>
-                        <p><strong>Activité : </strong><?= htmlspecialchars($row['activity_name']) ?></p>
-                        <p><strong>Note : </strong> <?= $row['note'] ?>/5</p>
-                        <p><?= nl2br(htmlspecialchars($row['commentaire'])) ?></p>
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                if (count($reviews) > 0): ?>
+                    <div class="testimonials-grid">
+                        <?php foreach ($reviews as $row): ?>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-user">Membre #<?= htmlspecialchars($row['utilisateur_id']) ?></span>
+                                        <span class="testimonial-date"><?= date('d M Y', strtotime($row['date_avis'])) ?></span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                                        <i class="fas fa-star <?= $i <= $row['note'] ? 'star-filled' : 'star-empty' ?>"></i>
+                                    <?php endfor; ?>
+                                </div>
+                                <div class="testimonial-activity">
+                                    <i class="fas fa-dumbbell"></i> <?= htmlspecialchars($row['activity_name']) ?>
+                                </div>
+                                <p class="testimonial-text"><?= nl2br(htmlspecialchars($row['commentaire'])) ?></p>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach;
-            } else {
-                echo '<div class="sport-notification">
-                <div class="sport-icon">🏆</div>
-                <div class="sport-message">
-                    <h3>Zone d\'avis en construction !</h3>
-                    <p>Aucun feedback sportif avec une note supérieure à 3 n\'a été enregistré.</p>
-                    <p>Soyez le premier à partager votre expérience et motivez notre équipe !</p>
-                    <p style="font-size: 1.2rem; font-weight: 600;">
-                        <a href="login.php" class="alert-link">Connectez-vous</a> pour laisser votre avis dès maintenant.
-                    </p>
-                </div>
-            </div>';
+                <?php else: ?>
+                    <div class="no-reviews">
+                        <i class="fas fa-comments"></i>
+                        <h3>Aucun avis pour le moment</h3>
+                        <p>Soyez le premier a partager votre experience sportive !</p>
+                    </div>
+                <?php endif;
+            } catch (PDOException $e) {
+                echo '<div class="alert alert-danger">Erreur : ' . htmlspecialchars($e->getMessage()) . '</div>';
             }
-        } catch (PDOException $e) {
-            echo '<div class="alert alert-danger">Erreur lors de la récupération des avis : ' . $e->getMessage() . '</div>';
-        }
-        ?>
+            ?>
+        </div>
     </section>
 
     <!-- pour gerer les message d'erreur de la session -->
